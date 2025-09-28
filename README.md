@@ -6,57 +6,59 @@ It dynamically customizes email content for each company and attaches your resum
 ---
 
 ## 🚀 Features
-- Send emails to multiple companies with **one command**.
-- Automatically **skip companies without emails**.
-- Attach your **resume (PDF)** to every email.
-- **Custom email subject line** that looks professional.
-- Clear **success & failure logs** with company names.
-- Store all companies inside a simple **array of objects**.
+- ✉️ Send emails to multiple companies with **one command**  
+- ⏭️ Automatically **skip companies without emails**  
+- 📎 Attach your **resume (PDF)** to every email  
+- 📝 **Custom email subject line** that looks professional  
+- ✅ Clear **success & failure logs** with company names  
+- 📂 Store all companies inside a simple **array of objects**
 
 ---
 
 ## 📂 Project Structure
 ```bash
-📦 job-application-sender
- ┣ 📜 index.js             # Main code (Nodemailer logic)
- ┣ 📜 Resume_Ismail_Abbasi.pdf  # Your resume (replace with yours)
+📦 auto-emailing
+ ┣ 📜 index.js                # Main code (Nodemailer logic)
+ ┣ 📜 Resume_Ismail_Abbasi.pdf # Your resume (replace with yours)
  ┣ 📜 package.json
  ┣ 📜 .gitignore
  ┗ 📜 README.md
-⚙️ Setup Instructions
-1️⃣ Clone the repository
-bash
-Copy code
-git clone https://github.com/your-username/job-application-sender.git
-cd job-application-sender
-2️⃣ Install dependencies
-bash
-Copy code
-npm install nodemailer
-3️⃣ Create .gitignore
-Make sure to ignore node_modules and sensitive files:
+```
 
-bash
-Copy code
-# .gitignore
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/IsmailofficialGithub/AutoMail.git
+cd AutoMail
+```
+
+### 2️⃣ Install Dependencies
+```bash
+npm install nodemailer
+```
+
+### 3️⃣ Create `.gitignore`
+```gitignore
 node_modules/
 .env
-4️⃣ Generate Gmail App Password
-Since Gmail doesn’t allow direct login, you must create an App Password:
+```
 
-Go to Google Account Security.
+### 4️⃣ Generate Gmail App Password
+1. Go to **Google Account Security**  
+2. Enable **2-Step Verification**  
+3. Create a new **App Password** for "Mail"  
+4. Copy the **16-character password**  
 
-Enable 2-Step Verification.
+---
 
-Create a new App Password for "Mail".
+## 🖊️ Usage
 
-Copy the 16-character password.
+Update your `index.js` file:
 
-🖊️ Usage
-Update your index.js file:
-
-javascript
-Copy code
+```js
 const companies = [
   {
     id: 1,
@@ -67,20 +69,20 @@ const companies = [
   },
   // Add more companies...
 ];
-Replace placeholders in user and pass:
 
-javascript
-Copy code
-let user = "yourGmail@gmail.com";  // <-- Your Gmail
-let pass = "your_app_password";    // <-- Gmail App Password
+let user = "yourGmail@gmail.com";   // <-- Your Gmail
+let pass = "your_app_password";     // <-- Gmail App Password
+```
+
 Run the script:
-
-bash
-Copy code
+```bash
 node index.js
-📧 Example Email Body
-text
-Copy code
+```
+
+---
+
+## 📧 Example Email Body
+```text
 Hello [Company Name],
 
 I am writing to express my interest in internship or entry-level opportunities at your company.
@@ -99,25 +101,27 @@ Phone: +92 325 5028225
 
 Best regards,  
 Ismail Abbasi
-🛠️ Technologies Used
-Node.js
+```
 
-Nodemailer
+---
 
-JavaScript (ESM)
+## 🛠️ Technologies Used
+- Node.js  
+- Nodemailer  
+- JavaScript (ESM)  
+- Gmail App Passwords  
 
-Gmail App Passwords
+---
 
-👤 Author
-Ismail Abbasi
+## 👤 Author
+**Ismail Abbasi**  
 
-🌐 Portfolio: ismailabbasi.qzz.io
+🌐 Portfolio: [ismailabbasi.qzz.io](https://www.ismailabbasi.qzz.io)  
+💼 LinkedIn: [linkedin.com/in/ismailabbasi](https://www.linkedin.com/in/ismailabbasi)  
+📧 Email: ismail.officail295@gmail.com  
+📱 Phone: +92 325 5028225  
 
-💼 LinkedIn: linkedin.com/in/ismailabbasi
+---
 
-📧 Email: ismail.officail295@gmail.com
-
-📱 Phone: +92 325 5028225
-
-⚠️ Disclaimer
-This project is for educational purposes only. Please use responsibly and avoid spamming. 🚫
+## ⚠️ Disclaimer
+This project is for **educational purposes only**. Please use responsibly and avoid spamming 🚫.
